@@ -1,0 +1,22 @@
+{
+  "name": "@braintechken/shipsafe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local Next.js production readiness checks",
+  "type": "module",
+  "bin": {
+    "shipsafe": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "scan": "node dist/cli.js scan ."
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "@types/node": "^22.10.0"
+  }
+}
